@@ -1,0 +1,124 @@
+/* DEMO CSS */
+	body{
+		width:100%;
+		margin:0px;
+		padding:0px;
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;	/* Font to use */
+		background-color:#E2EBED;
+	}
+	#heading{
+		height:161px;
+	}
+	
+	/* END DEMO CSS */
+	
+	#dragScriptContainer{	/* BIG DIV containing HTML needed for the entire script */
+		width:550px;
+		margin:0 auto;
+		border:1px solid #000;
+		height:710px;
+		margin-top:20px;
+		padding:3px;
+		-moz-user-select:no;
+		overflow:hidden;
+		background-color:#FFF;
+		
+	}
+	h1{
+		margin:5px;
+		
+	}
+	#questionDiv{	/* Big div for all the questions */
+		float:right;
+		height:100%;
+		width:300px;
+
+		padding:2px;
+		
+		visibility:visible;	/* Initial state  - Don't change this */
+	}
+	#answerDiv{	/* Big div for all the answers */
+		float:left;
+		height:400px;
+		width:150px;
+		border:1px solid #FFF;
+		padding:2px;	
+		
+		visibility:visible; /* Initial state  - Don't change this */
+	}
+	
+	#questionDiv div,#answerDiv div,#dragContent div{	/* General rules for small divs - i.e. specific questions and answers */
+		width:145px;
+		height:20px;
+		line-height:20px;		
+		float:left;
+		margin-right:2px;
+		margin-bottom:2px;
+		text-align:center;
+		
+	}
+	
+	#dragContent div{	/* Drag content div - i.e. specific answers when they are beeing dragged */
+		border:1px solid #000;
+	}
+	
+	#answerDiv .dragDropSmallBox{	/* Small answer divs */
+		border:1px solid #000;
+		cursor:pointer;
+	}
+	
+	#questionDiv .dragDropSmallBox{	/* Small answer divs */
+		border:1px solid #000;
+		cursor:pointer;
+		background-color:#E2EBED;
+	}
+	
+	#questionDiv div div{	/* DIV after it has been dragged from right to left box */
+		margin:0px;
+		border:0px;
+		padding:0px;
+		background-color:#FFF;
+		cursor:pointer;
+	}
+	#questionDiv .destinationBox{	/* Small empty boxes for the questions - i.e. where answers could be dragged */
+		border:0px;
+		background-color:#DDD;
+		width:147px;	/* Width of #questionDiv div + 2 */
+		height:22px;
+		
+	
+		
+	}
+	#questionDiv .correctAnswer{	/* CSS indicating correct answer */
+		
+		
+		border:1px solid #000;
+	}
+	#questionDiv .wrongAnswer{	/* CSS indicating wrong answer */
+		
+		
+		border:1px solid #000;
+	}
+
+	#dragContent div{
+		background-color:#FFF;
+	}
+
+	#questionDiv .dragContentOver{	/* Mouse over question boxes - i.e. indicating where dragged element will be appended if mouse button is relased */
+		border:1px solid #F00;
+	}
+	
+	#answerDiv.dragContentOver{	/* Mouse over answer box - i.e. indicating where dragged element will be appended if mouse button is relased */
+		border:1px solid #F00;
+	}
+	
+	/* NEVER CHANGE THIS */
+	#dragContent{
+		position:absolute;
+		display:none;
+	}	
+	p{
+		margin:2px;
+		font-size:0.9em;
+	}
+	
